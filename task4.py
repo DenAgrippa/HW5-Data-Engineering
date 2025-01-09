@@ -1,5 +1,9 @@
 import functions as f
 
+# Этот набор данных включает в себя различную информацию, связанную с предпочтениями покупателей, а именно: 
+# возраст покупателя, пол, сумму покупки, предпочтительные способы оплаты, частоту покупок и рейтинги отзывов, и т.д.
+#
+# https://www.kaggle.com/datasets/iamsouravbanerjee/customer-shopping-trends-dataset
 collection = f.connect_db('test')
 collection.insert_many(f.read_json('data/shopping_trends_1.json'))
 collection.insert_many(f.read_csv('data/shopping_trends_2.csv', delimiter=','))
